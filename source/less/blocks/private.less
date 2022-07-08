@@ -1,5 +1,14 @@
 .private {
   display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 20px 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 40px;
+  }
 }
 
 .private__link {
@@ -10,6 +19,47 @@
   justify-content: center;
   width: 60px;
   height: 60px;
+  margin-right: 8px;
+
+  &:hover,
+  &:focus {
+    color: @base-primary;
+
+    .private__icon {
+      fill: @base-primary;
+    }
+  }
+
+  &:active {
+    background-color: @base-secondary;
+    color: @base-primary;
+
+    .private__icon {
+      fill: @base-primary;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &:active {
+      background-color: @base-secondary;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    box-sizing: border-box;
+    height: 80px;
+    padding: 32px 20px;
+    margin-right: 20px;
+  }
+}
+
+.private__icon {
+  fill: @base-black;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 8px;
+  }
 }
 
 .private__button {
@@ -22,8 +72,46 @@
   padding: 0;
   width: 60px;
   height: 60px;
+
+  &:hover,
+  &:focus {
+    color: @base-primary;
+
+    .private__icon {
+      fill: @base-primary;
+    }
+  }
+
+  &:active {
+    background-color: @base-secondary;
+    color: @base-primary;
+
+    .private__icon {
+      fill: @base-primary;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &:active {
+      background-color: @base-secondary;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 80px;
+    width: 100%;
+    padding: 32px 20px;
+  }
 }
 
 .private__text {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
 }
