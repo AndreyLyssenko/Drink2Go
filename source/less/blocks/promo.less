@@ -13,7 +13,7 @@
     align-items: center;
     position: relative;
     padding-top: 60px;
-    padding-bottom: 0;
+    padding-bottom: 496px;
 
     &::after {
       content: "";
@@ -29,10 +29,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 600px 625px;
-    grid-template-rows: repeat(6, max-content);
-    column-gap: 30px;
+    flex-direction: row;
     text-align: left;
     justify-content: center;
     padding-top: 30px;
@@ -62,19 +59,22 @@
   z-index: 2;
 
   @media (min-width: @tablet-width) {
-    order: 5;
     width: 476px;
     height: 476px;
-    top: 352px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0;
+    position: absolute;
   }
 
   @media (min-width: @desktop-width) {
     order: 1;
     width: 600px;
     height: 600px;
+    transform: none;
     position: static;
-    grid-row: span 5;
+    margin-right: 30px;
   }
 }
 
@@ -241,7 +241,7 @@
     left: 50%;
     width: 11px;
     height: 20px;
-    background-image: url("../img/icons/slider-control.svg");
+    background-image: url("../img/icons/swiper-control-icons/swiper-control.svg");
   }
 
   &--prev {
@@ -263,7 +263,7 @@
 
   &--disabled {
     &::after {
-      background-image: url("../img/icons/slider-control-disabled.svg");
+      background-image: url("../img/icons/swiper-control-icons/swiper-control-disabled.svg");
     }
   }
 

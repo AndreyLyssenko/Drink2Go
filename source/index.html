@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drink2Go</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="./fonts/montserrat_400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/montserrat_700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -21,14 +21,14 @@
         <div class="navigation__logo">
           <a class="navigation__logo-link">
             <span class="visually-hidden">логотип Drink2Go</span>
-            <svg class="navigation__logo-icon--mobile" width="32" height="36" aria-hidden="true" focusable="false" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/icons/sprite.svg#logo-small">
+            <svg class="navigation__logo-icon navigation__logo-icon--mobile" width="32" height="36" aria-hidden="true" focusable="false" viewBox="0 0 32 36" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icons/sprite.svg#logo-small"></use>
             </svg>
-            <svg class="navigation__logo-icon--tablet" width="82" height="36" aria-hidden="true" focusable="false" height="36" viewBox="0 0 82 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/icons/sprite.svg#logo-medium">
+            <svg class="navigation__logo-icon navigation__logo-icon--tablet" width="82" height="36" aria-hidden="true" focusable="false" viewBox="0 0 82 36" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icons/sprite.svg#logo-medium"></use>
             </svg>
-            <svg  class="navigation__logo-icon--desktop" width="167" height="36" aria-hidden="true" focusable="false" viewBox="0 0 167 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/icons/sprite.svg#logo-full">
+            <svg  class="navigation__logo-icon navigation__logo-icon--desktop" width="167" height="36" aria-hidden="true" focusable="false" viewBox="0 0 167 36" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icons/sprite.svg#logo-full"></use>
             </svg>
             <p class="navigation__logo-text">Интернет-магазин кофейных напитков</p>
           </a>
@@ -50,23 +50,23 @@
         <div class="private">
           <a class="private__link" href="#">
             <svg class="private__icon private__icon--login" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/icons/sprite.svg#login-icon">
+              <use xlink:href="img/icons/sprite.svg#login-icon"></use>
             </svg>
             <span class="private__text">Войти</span>
           </a>
           <button class="private__button" type="button">
             <svg class="private__icon private__icon--basket" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/icons/sprite.svg#basket-icon">
+              <use xlink:href="img/icons/sprite.svg#basket-icon"></use>
             </svg>
             <span class="private__text">Корзина</span>
           </button>
         </div>
         <button class="navigation__button navigation__button--no-js" type="button"><span class="visually-hidden">Открыть меню навигации</span>
-          <svg class="navigation__icon navigation__icon--open" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icons/sprite.svg#nav-open-icon">
+          <svg class="navigation__icon navigation__icon--open" width="12" height="12" aria-hidden="true" focusable="false" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/icons/sprite.svg#nav-open-icon"></use>
           </svg>
-          <svg class="navigation__icon navigation__icon--close" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icons/sprite.svg#nav-close-icon">
+          <svg class="navigation__icon navigation__icon--close" width="12" height="12" aria-hidden="true" focusable="false" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/icons/sprite.svg#nav-close-icon"></use>
           </svg>
         </button>
       </nav>
@@ -78,40 +78,67 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="promo__slide-wrapper promo__slide-wrapper--flat">
-              <img class="promo__picture" src="img/content/flat-coffee-slider.png" alt="Декаф Флэт Уайт" width="280" height="280">
-              <span class="promo__badge">Новинка!</span>
-              <p class="promo__title">Декаф Флэт Уайт</p>
-              <p class="promo__text">Свежесваренный кофе без кофеина из Эфиопии <br class="promo__break">с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-              <div class="promo__buy">
-                <p class="promo__old-price">295₽</p>
-                <p class="promo__price">225₽</p>
-                <button class="button promo__button">Заказать</button>
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/promo-content/flat-white-desktop.webp 1x, img/content/promo-content/flat-white-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/content/promo-content/flat-white-tablet.webp 1x, img/content/promo-content/flat-white-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/content/promo-content/flat-white-mobile.webp 1x, img/content/promo-content/flat-white-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/content/promo-content/flat-white-desktop.png 1x, img/content/promo-content/flat-white-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/content/promo-content/flat-white-tablet.png 1x, img/content/promo-content/flat-white-tablet@2x.png 2x">
+                <img class="promo__picture" src="img/content/promo-content/flat-white-mobile.png" srcset="img/content/promo-content/flat-white-mobile@2x.png 2x" alt="Декаф Флэт Уайт" width="280" height="280">
+              </picture>
+              <div class="promo__description">
+                <span class="promo__badge">Новинка!</span>
+                <p class="promo__title">Декаф Флэт Уайт</p>
+                <p class="promo__text">Свежесваренный кофе без кофеина из Эфиопии <br class="promo__break">с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                <div class="promo__buy">
+                  <p class="promo__old-price">295₽</p>
+                  <p class="promo__price">225₽</p>
+                  <button class="button promo__button">Заказать</button>
+                </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="promo__slide-wrapper promo__slide-wrapper--lavender">
-              <img class="promo__picture" src="img/content/lavender-slider.png" alt="Лавандовый Латте" width="280" height="280">
-              <span class="promo__badge">Новинка!</span>
-              <p class="promo__title">Лавандовый Латте</p>
-              <p class="promo__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-              <div class="promo__buy">
-                <p class="promo__old-price">285₽</p>
-                <p class="promo__price">265₽</p>
-                <button class="button promo__button">Заказать</button>
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/promo-content/lavender-desktop.webp 1x, img/content/promo-content/lavender-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/content/promo-content/lavender-tablet.webp 1x, img/content/promo-content/lavender-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/content/promo-content/lavender-mobile.webp 1x, img/content/promo-content/lavender-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/content/promo-content/lavender-desktop.png 1x, img/content/promo-content/lavender-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/content/promo-content/lavender-tablet.png 1x, img/content/promo-content/lavender-tablet@2x.png 2x">
+                <img class="promo__picture" src="img/content/promo-content/lavender-mobile.png" srcset="img/content/promo-content/lavender-mobile@2x.png 2x" alt="Лавандовый Латте" width="280" height="280">
+              </picture>
+              <div class="promo__description">
+                <span class="promo__badge">Новинка!</span>
+                <p class="promo__title">Лавандовый Латте</p>
+                <p class="promo__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                <div class="promo__buy">
+                  <p class="promo__old-price">285₽</p>
+                  <p class="promo__price">265₽</p>
+                  <button class="button promo__button">Заказать</button>
+                </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="promo__slide-wrapper promo__slide-wrapper--espresso">
-              <img class="promo__picture" src="img/content/espresso-slider.png" alt="Тройной Эспрессо" width="280" height="280">
-              <span class="promo__badge">Новинка!</span>
-              <p class="promo__title">Тройной Эспрессо</p>
-              <p class="promo__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-              <div class="promo__buy">
-                <p class="promo__old-price">395₽</p>
-                <p class="promo__price">375₽</p>
-                <button class="button promo__button">Заказать</button>
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/promo-content/espresso-desktop.webp 1x, img/content/promo-content/espresso-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/content/promo-content/espresso-tablet.webp 1x, img/content/promo-content/espresso-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/content/promo-content/espresso-mobile.webp 1x, img/content/promo-content/espresso-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/content/promo-content/espresso-desktop.png 1x, img/content/promo-content/espresso-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/content/promo-content/espresso-tablet.png 1x, img/content/promo-content/espresso-tablet@2x.png 2x">
+                <img class="promo__picture" src="img/content/promo-content/espresso-mobile.png" srcset="img/content/promo-content/espresso-mobile@2x.png 2x" alt="Тройной Эспрессо" width="280" height="280">
+              </picture>
+              <div class="promo__description">
+                <span class="promo__badge">Новинка!</span>
+                <p class="promo__title">Тройной Эспрессо</p>
+                <p class="promo__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                <div class="promo__buy">
+                  <p class="promo__old-price">395₽</p>
+                  <p class="promo__price">375₽</p>
+                  <button class="button promo__button">Заказать</button>
+                </div>
               </div>
             </div>
           </div>
@@ -251,8 +278,13 @@
         <p class="visually-hidden">Список товаров</p>
         <ul class="catalog__list">
           <li class="catalog__item">
-            <img class="catalog__img" src="img/content/coffee-can-placeholder.png" alt="Декаф Флэт Уайт" width="130" height="188">
-            <p class="catalog__title">Декаф Флэт Уайт</p>
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" srcset="img/content/coffee-can-1.webp 1x, img/content/coffee-can-1@2x.webp 2x">
+                <img class="catalog__img" src="img/content/coffee-can-1.png" srcset="img/content/coffee-can-1@2x.png 2x" alt="Декаф Флэт Уайт" width="130" height="188">
+              </picture>
+              <p class="catalog__title">Декаф Флэт Уайт</p>
+            </a>
             <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
@@ -260,8 +292,13 @@
             </div>
           </li>
           <li class="catalog__item">
-            <img class="catalog__img" src="img/content/coffee-can-placeholder.png" alt="Декаф Флэт Уайт" width="130" height="188">
-            <p class="catalog__title">Декаф Флэт Уайт</p>
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" srcset="img/content/coffee-can-2.webp 1x, img/content/coffee-can-2@2x.webp 2x">
+                <img class="catalog__img" src="img/content/coffee-can-2.png" srcset="img/content/coffee-can-2@2x.png 2x" alt="Декаф Флэт Уайт" width="130" height="188">
+              </picture>
+              <p class="catalog__title">Декаф Флэт Уайт</p>
+            </a>
             <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
@@ -269,8 +306,13 @@
             </div>
           </li>
           <li class="catalog__item">
-            <img class="catalog__img" src="img/content/coffee-can-placeholder.png" alt="Декаф Флэт Уайт" width="130" height="188">
-            <p class="catalog__title">Декаф Флэт Уайт</p>
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" srcset="img/content/coffee-can-3.webp 1x, img/content/coffee-can-3@2x.webp 2x">
+                <img class="catalog__img" src="img/content/coffee-can-3.png" srcset="img/content/coffee-can-3@2x.png 2x" alt="Декаф Флэт Уайт" width="130" height="188">
+              </picture>
+              <p class="catalog__title">Декаф Флэт Уайт</p>
+            </a>
             <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
@@ -278,8 +320,13 @@
             </div>
           </li>
           <li class="catalog__item">
-            <img class="catalog__img" src="img/content/coffee-can-placeholder.png" alt="Декаф Флэт Уайт" width="130" height="188">
-            <p class="catalog__title">Декаф Флэт Уайт</p>
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" srcset="img/content/coffee-can-4.webp 1x, img/content/coffee-can-4@2x.webp 2x">
+                <img class="catalog__img" src="img/content/coffee-can-4.png" srcset="img/content/coffee-can-4@2x.png 2x" alt="Декаф Флэт Уайт" width="130" height="188">
+              </picture>
+              <p class="catalog__title">Декаф Флэт Уайт</p>
+            </a>
             <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
@@ -287,8 +334,13 @@
             </div>
           </li>
           <li class="catalog__item">
-            <img class="catalog__img" src="img/content/coffee-can-placeholder.png" alt="Декаф Флэт Уайт" width="130" height="188">
-            <p class="catalog__title">Декаф Флэт Уайт</p>
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" srcset="img/content/coffee-can-5.webp 1x, img/content/coffee-can-5@2x.webp 2x">
+                <img class="catalog__img" src="img/content/coffee-can-5.png" srcset="img/content/coffee-can-5@2x.png 2x" alt="Декаф Флэт Уайт" width="130" height="188">
+              </picture>
+              <p class="catalog__title">Декаф Флэт Уайт</p>
+            </a>
             <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
@@ -296,8 +348,13 @@
             </div>
           </li>
           <li class="catalog__item">
-            <img class="catalog__img" src="img/content/coffee-can-placeholder.png" alt="Декаф Флэт Уайт" width="130" height="188">
-            <p class="catalog__title">Декаф Флэт Уайт</p>
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" srcset="img/content/coffee-can-6.webp 1x, img/content/coffee-can-6@2x.webp 2x">
+                <img class="catalog__img" src="img/content/coffee-can-6.png" srcset="img/content/coffee-can-6@2x.png 2x" alt="Декаф Флэт Уайт" width="130" height="188">
+              </picture>
+              <p class="catalog__title">Декаф Флэт Уайт</p>
+            </a>
             <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
@@ -308,8 +365,8 @@
         <div class="pagination">
           <span class="visually-hidden">Перейти на другую страницу каталога:</span>
           <button class="pagination__button pagination__button--previous" type="button">
-            <svg class="pagination__ico" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/icons/sprite.svg#pagintaion-arrow">
+            <svg class="pagination__ico" width="10" height="10" aria-hidden="true" focusable="false" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icons/sprite.svg#pagintaion-arrow"></use>
             </svg>
             <span class="pagination__text">Назад</span>
           </button>
@@ -325,8 +382,8 @@
             </li>
           </ul>
           <button class="pagination__button pagination__button--next" type="button">
-            <svg class="pagination__ico" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/icons/sprite.svg#pagintaion-arrow">
+            <svg class="pagination__ico" width="10" height="10" aria-hidden="true" focusable="false" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icons/sprite.svg#pagintaion-arrow"></use>
             </svg>
             <span class="pagination__text">Вперед</span>
           </button>
@@ -340,11 +397,11 @@
     <footer class="footer">
       <div class="footer__social-wrapper">
         <a class="footer__logo-link footer__logo-link--current">
-          <svg class="footer__logo-icon footer__logo-icon--mobile" width="82" height="36" aria-hidden="true" focusable="false" height="36" viewBox="0 0 82 36" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icons/sprite.svg#logo-medium">
+          <svg class="footer__logo-icon footer__logo-icon--mobile" width="82" height="36" aria-hidden="true" focusable="false" viewBox="0 0 82 36" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/icons/sprite.svg#logo-medium"></use>
           </svg>
-          <svg  class="footer__logo-icon footer__logo-icon--tablet" width="167" height="36" aria-hidden="true" focusable="false" viewBox="0 0 167 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icons/sprite.svg#logo-full">
+          <svg  class="footer__logo-icon footer__logo-icon--tablet" width="167" height="36" aria-hidden="true" focusable="false" viewBox="0 0 167 36" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/icons/sprite.svg#logo-full"></use>
           </svg>
           <p class="footer__logo-text">Интернет-магазин кофейных напитков</p>
         </a>
@@ -353,24 +410,24 @@
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
               <span class="visually-hidden">Вконтакте</span>
-              <svg class="footer__social-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/icons/sprite.svg#vk-icon">
+              <svg class="footer__social-icon" width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/icons/sprite.svg#vk-icon"></use>
               </svg>
             </a>
           </li>
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
               <span class="visually-hidden">Pinterest</span>
-              <svg class="footer__social-icon" width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/icons/sprite.svg#pinterest-icon">
+              <svg class="footer__social-icon" width="22" height="22" aria-hidden="true" focusable="false" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/icons/sprite.svg#pinterest-icon"></use>
               </svg>
             </a>
           </li>
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
               <span class="visually-hidden">Одноклассники</span>
-              <svg class="footer__social-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/icons/sprite.svg#ok-icon">
+              <svg class="footer__social-icon" width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/icons/sprite.svg#ok-icon"></use>
               </svg>
             </a>
           </li>
@@ -418,8 +475,8 @@
         <span class="footer__developer-text">Разработано в</span>
         <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           HTML Academy
-          <svg class="footer__developer-icon" width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icons/sprite.svg#html-icon">
+          <svg class="footer__developer-icon" width="12" height="16" aria-hidden="true" focusable="false" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/icons/sprite.svg#html-icon"></use>
           </svg>
         </a>
       </div>
