@@ -93,7 +93,7 @@
                 <div class="promo__buy">
                   <p class="promo__old-price">295₽</p>
                   <p class="promo__price">225₽</p>
-                  <button class="button promo__button">Заказать</button>
+                  <button class="button promo__buy-button">Заказать</button>
                 </div>
               </div>
             </div>
@@ -165,14 +165,14 @@
           </li>
           <li class="advantages__item advantages__item--eco">
             <p class="advantages__title">Экологичность</p>
-            <p class="advantages__text">Вся упаковка сделана <br class="advantages__break">из перерабатываемых материалов</p>
+            <p class="advantages__text">Вся упаковка сделана&nbsp;<br class="advantages__break">из перерабатываемых материалов</p>
           </li>
         </ul>
       </section>
       <section class="catalog" id="catalog">
         <h3 class="catalog__header">Каталог</h3>
         <p class="catalog__headline">Каталог кофейных напитков</p>
-        <form class="form" action="https://echo.htmlacademy.ru" method="get">
+        <form class="form" action="https://echo.htmlacademy.ru" method="get" id="sorting-form">
           <p class="visually-hidden">Фильтр каталога товаров</p>
           <fieldset class="form__fieldset form__fieldset--price">
             <legend class="form__legend">Цена</legend>
@@ -268,11 +268,21 @@
         </form>
         <div class="catalog__filter">
           <p class="catalog__label">Сортировка:</p>
-          <select class="catalog__select" name="filter" id="filter">
-            <option value="standard">по умолчанию</option>
-            <option value="high-price">сначала дорогие</option>
-            <option value="low-price">сначала дешёвые</option>
-            <option value="high-rate">высокий рейтинг</option>
+          <button class="catalog__select catalog__select--closed" type="button">
+            <span class="catalog__current-filter">по умолчанию</span>
+            <span class="catalog__select-marker"></span>
+          </button>
+          <ul class="catalog__option-list catalog__option-list--closed">
+            <li class="catalog__option catalog__option--current" id="standard">по умолчанию</li>
+            <li class="catalog__option" id="high-price">сначала дорогие</li>
+            <li class="catalog__option" id="low-price">сначала дешёвые</li>
+            <li class="catalog__option" id="high-rate">высокий рейтинг</li>
+          </ul>
+          <select class="visually-hidden" name="filter" id="filter" form="sorting-form">
+            <option value="standard" selected></option>
+            <option value="high-price"></option>
+            <option value="low-price"></option>
+            <option value="high-rate"></option>
           </select>
         </div>
         <p class="visually-hidden">Список товаров</p>
@@ -285,7 +295,7 @@
               </picture>
               <p class="catalog__title">Декаф Флэт Уайт</p>
             </a>
-            <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="catalog__text">Кофе без кофеина из Эфиопии&nbsp;<br class="catalog__break">с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
               <button class="button catalog__button" type="button">В корзину</button>
@@ -299,7 +309,7 @@
               </picture>
               <p class="catalog__title">Декаф Флэт Уайт</p>
             </a>
-            <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="catalog__text">Кофе без кофеина из Эфиопии&nbsp;<br class="catalog__break">с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
               <button class="button catalog__button" type="button">В корзину</button>
@@ -313,7 +323,7 @@
               </picture>
               <p class="catalog__title">Декаф Флэт Уайт</p>
             </a>
-            <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="catalog__text">Кофе без кофеина из Эфиопии&nbsp;<br class="catalog__break">с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
               <button class="button catalog__button" type="button">В корзину</button>
@@ -327,7 +337,7 @@
               </picture>
               <p class="catalog__title">Декаф Флэт Уайт</p>
             </a>
-            <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="catalog__text">Кофе без кофеина из Эфиопии&nbsp;<br class="catalog__break">с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
               <button class="button catalog__button" type="button">В корзину</button>
@@ -341,7 +351,7 @@
               </picture>
               <p class="catalog__title">Декаф Флэт Уайт</p>
             </a>
-            <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="catalog__text">Кофе без кофеина из Эфиопии&nbsp;<br class="catalog__break">с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
               <button class="button catalog__button" type="button">В корзину</button>
@@ -355,7 +365,7 @@
               </picture>
               <p class="catalog__title">Декаф Флэт Уайт</p>
             </a>
-            <p class="catalog__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="catalog__text">Кофе без кофеина из Эфиопии&nbsp;<br class="catalog__break">с натуральным фермерским молоком</p>
             <div class="catalog__price-block">
               <p class="catalog__price">225₽</p>
               <button class="button catalog__button" type="button">В корзину</button>

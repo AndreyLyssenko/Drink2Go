@@ -78,6 +78,13 @@
   }
 }
 
+.promo__description {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 7px;
+    margin-right: 20px;
+  }
+}
+
 .promo__badge {
   font-weight: 700;
   font-size: 12px;
@@ -86,10 +93,14 @@
   text-transform: uppercase;
   margin-bottom: 4px;
 
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-bottom: 4px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 2 / -1;
     grid-row: 1 / 2;
-    margin-top: 180px;
   }
 }
 
@@ -104,6 +115,7 @@
     font-size: 56px;
     line-height: 80px;
     margin-bottom: 16px;
+    letter-spacing: 0.02em;
   }
 
   @media (min-width: @desktop-width) {
@@ -120,29 +132,32 @@
     width: 600px;
     font-size: 20px;
     line-height: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 2 / -1;
     grid-row: 3 / 4;
     width: 580px;
+    margin-bottom: 40px;
   }
 }
 
 .promo__break {
-  @media (max-width: 1439px) {
-    display: none;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }
 
 .promo__buy {
   display: flex;
-  justify-content: center;
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    justify-content: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -157,14 +172,18 @@
   font-size: 16px;
   line-height: 32px;
   text-decoration: line-through;
-  margin: 0 6px 0 0;
+  margin: 0 9px 0 25px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 10px 0 0;
+  }
 }
 
 .promo__price {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  margin: 0 20px 0 0;
+  margin: 0 25px 0 0;
 }
 
 .promo__buy-button {
@@ -179,7 +198,7 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     width: 100%;
-    bottom: 60px;
+    bottom: 50px;
     transform: translateY(-50%);
     z-index: 1;
     display: flex;
@@ -242,6 +261,10 @@
     width: 11px;
     height: 20px;
     background-image: url("../img/icons/swiper-control-icons/swiper-control.svg");
+
+    @media (min-width: @tablet-width) {
+      top: 39%;
+    }
   }
 
   &--prev {
@@ -258,6 +281,10 @@
 
     &::after {
       transform: translate(-50%, -50%);
+
+      @media (min-width: @tablet-width) {
+        top: 61%;
+      }
     }
   }
 

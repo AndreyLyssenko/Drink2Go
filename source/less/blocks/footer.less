@@ -1,24 +1,32 @@
 .footer {
-  padding-top: 22px;
+  padding-top: 19px;
   padding-bottom: 30px;
   width: 320px;
   margin: 0 auto;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
+    padding-top: 38px;
     width: 768px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1440px;
     display: grid;
-    gap: 30px;
-    grid-template-columns: 358px 1fr;
+    column-gap: 20px;
+    row-gap: 27px;
+    grid-template-columns: 328px 1fr;
     padding: 40px;
   }
 }
 
 .footer__logo-link {
+  margin-top: 3px;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .footer__logo-icon {
@@ -57,17 +65,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   margin-left: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     flex-direction: column;
     align-items: flex-start;
+    width: 328px;
+    padding-bottom: 18px;
   }
 }
 
@@ -121,7 +131,7 @@
     margin: 0 auto;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 37px;
   }
 
   @media (min-width: @desktop-width) {
@@ -132,12 +142,13 @@
 
 .footer__about {
   border-top: 1px solid @base-secondary;
-  padding: 20px;
+  padding: 20px 20px 27px;
   display: flex;
   flex-direction: column;
 
   &:last-of-type {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    padding-bottom: 21px;
     border-bottom: 1px solid @base-secondary;
   }
 
@@ -150,6 +161,11 @@
       border: none;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
 }
 
 .footer__title {
@@ -157,7 +173,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  margin: 0 0 12px 0;
+  margin: 0 0 17px 0;
 }
 
 .footer__list {
@@ -167,11 +183,11 @@
 }
 
 .footer__item {
-  margin-bottom: 4px;
-}
+  margin-bottom: 16px;
 
-.footer__item:last-of-type {
-  margin-bottom: 0;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .footer__link {
@@ -196,6 +212,7 @@
   position: relative;
   color: @base-black;
   text-decoration: none;
+  margin-top: 2px;
   margin-bottom: 16px;
   padding-left: 20px;
 
@@ -271,6 +288,8 @@
 .footer__developer-text {
   color: @base-grey;
   margin-right: 4px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .footer__developer-icon {
@@ -285,6 +304,8 @@
   justify-content: center;
   text-align: center;
   text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
 
   &:hover {
     color: @base-primary;
