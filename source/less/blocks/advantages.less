@@ -10,6 +10,7 @@
 
   @media (min-width: @desktop-width) {
     width: 1440px;
+    margin-top: 0;
     padding-top: 100px;
   }
 }
@@ -22,6 +23,7 @@
   margin-bottom: 4px;
   margin-top: 50px;
   padding: 0 20px;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
@@ -43,7 +45,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 80px;
+    margin-bottom: 88px;
   }
 }
 
@@ -78,9 +80,9 @@
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    top: 25%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-55%, -54%);
   }
 
   &--speed {
@@ -92,6 +94,10 @@
   }
 
   &--comfort {
+    .advantages__text {
+      width: 237px;
+    }
+
     &::after {
       width: 48px;
       height: 52px;
@@ -126,6 +132,12 @@
   @media (min-width: @tablet-width) {
     padding: 0 0 0 72px;
     text-align: left;
+    margin-bottom: 0;
+
+    .advantages__text {
+      width: auto;
+      margin: 0;
+    }
 
     &--eco {
       .advantages__text {
@@ -143,15 +155,23 @@
     padding-top: 70px;
     padding-left: 0;
 
+    .advantages__text {
+      margin: 0 auto;
+    }
+
+    &::after {
+      top: 11%;
+    }
+
     &--comfort {
       .advantages__text {
-        width: 237px;
+        width: 265px;
       }
     }
 
     &--energy {
       .advantages__text {
-        width: 250px;
+        width: 300px;
       }
     }
   }
@@ -167,23 +187,25 @@
   line-height: 32px;
   margin-top: 0;
   margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 11px;
+  }
 }
 
 .advantages__text {
-  margin: 0;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 245px;
+    width: 260px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
     width: auto;
-  }
-}
-
-.advantages__break {
-  @media (max-width: 1439px) {
-    display: none;
   }
 }
