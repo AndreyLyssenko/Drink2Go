@@ -6,6 +6,8 @@
     <title>Drink2Go</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="./fonts/montserrat_400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat_500.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat_600.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/montserrat_700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -200,7 +202,7 @@
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--milk">
             <legend class="form__legend">Наличие молока</legend>
-            <ul class="form__list">
+            <ul class="form__list form__list--radio">
               <li class="form__item">
                 <label class="form__label" for="not-important">
                   <input class="visually-hidden form__input-radio" type="radio" name="milk" value="not-important" id="not-important" checked>

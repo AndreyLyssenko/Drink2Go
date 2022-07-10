@@ -109,10 +109,22 @@
   list-style-type: none;
   font-size: 16px;
   line-height: 24px;
+
+  &--radio {
+    .form__text {
+      margin-left: 34px;
+    }
+  }
+
+  &--checkbox {
+    .form__text {
+      margin-left: 52px;
+    }
+  }
 }
 
 .form__marker-radio {
-  position: relative;
+  position: absolute;
   display: block;
   width: 20px;
   height: 20px;
@@ -162,6 +174,7 @@
 //
 
 .form__marker-checkbox {
+  position: absolute;
   display: block;
   width: 42px;
   height: 24px;
@@ -196,12 +209,9 @@
   }
 
   .form__label {
+    position: relative;
     display: flex;
     align-items: center;
-  }
-
-  .form__text {
-    margin-left: 10px;
   }
 }
 
